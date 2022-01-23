@@ -32,7 +32,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="CLMR")
     parser = Trainer.add_argparse_args(parser)
 
-    config = yaml_config_hook("./config/config.yaml")
+    config = yaml_config_hook("/content/clmr/config/config.yaml")
     for k, v in config.items():
         parser.add_argument(f"--{k}", default=v, type=type(v))
 
@@ -144,7 +144,7 @@ if __name__ == "__main__":
             args,
             logger=logger,
             sync_batchnorm=True,
-            max_epochs=args.max_epochs,
+            max_epochs=10,
             log_every_n_steps=10,
             check_val_every_n_epoch=1,
             accelerator=args.accelerator,
