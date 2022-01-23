@@ -6,9 +6,9 @@ dataset_dir: "./data"
 
 # train options
 seed: 42
-batch_size: 48
+batch_size: 20
 # max_epochs: 200
-dataset: "audio" # ["magnatagatune", "msd", "gtzan", "audio"]
+dataset: "magnatagatune" # ["magnatagatune", "msd", "gtzan", "audio"]
 supervised: 0 # train with supervised baseline
 
 # SimCLR model options
@@ -26,8 +26,8 @@ checkpoint_path: "" # set to the directory containing `checkpoint_##.tar`
 # logistic regression options
 finetuner_mlp: 0
 finetuner_checkpoint_path: ""
-finetuner_max_epochs: 200
-finetuner_batch_size: 256
+finetuner_max_epochs: 10
+finetuner_batch_size: 25
 finetuner_learning_rate: 0.001
 
 # audio data augmentation options
