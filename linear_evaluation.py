@@ -24,7 +24,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="SimCLR")
     parser = Trainer.add_argparse_args(parser)
 
-    config = yaml_config_hook("./config/config.yaml")
+    config = yaml_config_hook("/content/clmr/config/config.yaml")
     for k, v in config.items():
         parser.add_argument(f"--{k}", default=v, type=type(v))
 
